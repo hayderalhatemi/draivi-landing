@@ -14,7 +14,7 @@ From the bottom of the VS Code press go live
 
 ### Features
 
-- Responsive design (mobile/tablet/desktop)
+- Responsive design (mobile/tablet/desktop) 
 - Dynamic monthly loan calculator
 - Countdown timer (Midsummer or New Year’s Eve via URL) use ?counter=newyear to see countdown to New Year's Eve
 - Accessible, validated form
