@@ -1,6 +1,6 @@
 # Loan Landing Page
 
-A modern, responsive landing page for applying for a loan online. Includes an animated hero section, real-time loan calculator, dynamic countdown timer, responsive form with validation, and a mobile-friendly hamburger menu. Hosted with GitHub Pages.
+A modern, responsive landing page for applying for a loan online. Includes an animated hero section, real-time loan calculator, dynamic countdown timer, responsive form with validation, and a mobile-friendly hamburger menu.
 
 ###  Run Locally
 
