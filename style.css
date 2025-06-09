@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: #4f46e5;
-  --secondary-color: #000248;
+  --secondary-color: #0a0f9e;
   --link-color: #0a00ab;
   --text-color: #1f2937;
   --white-color: #fff;
@@ -92,7 +92,7 @@ button {
 /* HEADER */
 .header {
   background: linear-gradient(to right, var(--secondary-color), var(--link-color));
-  color: #fff;
+  color: var(--);
   padding: 20px 0;
   border-bottom: 1px solid #eee;
 }
@@ -105,7 +105,7 @@ button {
 
 .logo {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .nav ul {
@@ -118,7 +118,7 @@ button {
 
 .nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--);
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -130,7 +130,7 @@ button {
 /* HERO SECTION */
 .hero {
   background: linear-gradient(to right, var(--secondary-color), var(--link-color));
-  color: #fff;
+  color: var(--);
   padding: 100px 20px;
   text-align: center;
   border-radius: 0 0 40px 40px;
@@ -163,7 +163,7 @@ button {
 }
 
 .hero button {
-  background-color: #fff;
+  background-color: var(--);
   color: #4f46e5;
   border: none;
   padding: 14px 28px;
@@ -175,14 +175,14 @@ button {
 }
 
 .hero button:hover {
-  background-color: #fff;
+  background-color: var(--);
   color: #3931d4;
   transform: translateY(-2px);
 }
 
 
 .form-container {
-  background: #fff;
+  background: var(--);
   padding: 30px;
   margin: 20px auto;
   border-radius: 16px;
@@ -289,7 +289,7 @@ input[type="checkbox"] {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 32px;
   margin-bottom: 30px;
   color: #1e3a8a;
 }
@@ -303,7 +303,7 @@ h2 {
 
 .feature {
   flex: 1 1 20px;
-  background: #fff;
+  background: var(--white-color);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
@@ -352,7 +352,7 @@ h2 {
 }
 
 .countdown-timer label {
-  font-size: 0.9rem;
+  font-size: 15px;
   opacity: 0.85;
   margin-top: 5px;
   display: block;
@@ -363,7 +363,7 @@ h2 {
   color: #1e3a8a;
   padding: 50px 20px 20px;
   margin-top: 60px;
-  font-size: 0.95rem;
+  font-size: 15px;
 }
 
 .footer-content {
@@ -424,7 +424,7 @@ h2 {
   margin-top: 40px;
   padding-top: 20px;
   color: #9ca3af;
-  font-size: 0.85rem;
+  font-size: 14px;
 }
 
 @media (max-width: 1024px) {
@@ -456,7 +456,7 @@ h2 {
     background-color: var(--white-color);
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem 1.5rem;
+    padding: 32px 24px;
     box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
     z-index: 1000;
@@ -468,12 +468,12 @@ h2 {
 
   .nav ul {
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
     width: 100%;
   }
 
   .nav a {
-    font-size: 1.2rem;
+    font-size: 19px;
     font-weight: bold;
     color: #1e3a8a;
     display: block;
@@ -490,11 +490,11 @@ h2 {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .nav ul {
@@ -536,11 +536,11 @@ h2 {
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 1.7rem;
+    font-size: 27px;
   }
 
   .hero p {
-    font-size: 0.95rem;
+    font-size: 15px;
   }
 
   button {
