@@ -1,66 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Loan Application Form</title>
 </head>
+
 <body>
-    
-    <header>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">LOAN</div>
 
-        <div class="logo">LOGO</div>
+            <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-icon"></span>
+            </button>
 
-        <nav class="nav">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </nav>
+            <nav id="navMenu" class="nav">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#applyNow">Apply</a></li>
+                    <li><a href="#countdown">Countdown</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-        <div class="hero">
-            <h1>Apply for a loan easily</h1>
-            <p>Fast approval. Transparent rates.</p>
-            <div class="loanForm">
-                <label for="">Loan amount:</label>
-                <select name="" id="amount">
-                    <option value="1000">1000</option>
-                    <option value="2000">2000</option>
-                    <option value="3000">3000</option>
-                    <option value="4000">4000</option>
-                    <option value="5000">5000</option>
-                </select><br>
-                
-                <label for="">Name: <input type="text" id="name"></label><br>
-                <label for="">Email: <input type="email" id="email"></label><br>
-                <label for="">Phone: <input type="tel" id="phone"></label><br>
-                <label for=""><input type="checkbox" id="consent"> I agree to the terms</label><br>
-                <label for=""><input type="checkbox" id="coapplicant"> Apply with co-applicant</label><br>
-                <button type="submit">Submit</button>
-                <p id="monthly"></p>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1><span class="highlight">Apply</span> for a Loan Easily</h1>
+                <p>Fast approvals, fair rates, and zero paperwork. Get started in minutes.</p>
+                <button id="applyNow">Start Now</button>
             </div>
         </div>
+    </div>
 
-        <main>
-            <h2>Why us?</h2>
-            <p>Lorem ipsum dolor, sit amet</p>
-            <h2>Safe & Trusted</h2>
-            <p>Lorem ipsum dolor sit amet</p>
-        </main>
+    <div class="form-container" id="loanFormSection">
+        <h2>Loan Application</h2>
+        <form id="loanForm" novalidate>
+            <label>Requested loan amount (select):</label>
+            <select id="loanAmount">
+                <option value="">Select an amount</option>
+            </select>
+            <div class="error-message" id="loanAmountError"></div>
 
-        <div class="countdown">
-            <h2>countdown to special day</h2>
-            <p id="timer"></p>
+            <input type="range" id="loanRange" min="1000" max="20000" step="1000">
+
+            <div id="monthlyPayment"></div>
+
+            <label>Name</label>
+            <input type="text" id="userName">
+            <div class="error-message" id="nameError"></div>
+
+            <label>Email</label>
+            <input type="email" id="userEmail">
+            <div class="error-message" id="emailError"></div>
+
+            <label>Phone Number</label>
+            <input type="tel" id="userPhone">
+            <div class="error-message" id="phoneError"></div>
+
+            <label>
+                <input type="checkbox" id="consent">
+                I agree to the terms and conditions
+            </label>
+            <div class="error-message" id="consentError"></div>
+
+            <label>
+                <input type="checkbox" id="coApplicant">
+                Applying with a co-applicant
+            </label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="main-section features" id="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Fast Approval</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>Transparent Terms</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. No hidden fees, no surprises.</p>
+                </div>
+                <div class="feature">
+                    <h3>Flexible Options</h3>
+                    <p>Choose a loan amount and term that works for you. Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <footer>
-            <p>Contact: info@draivi.fi</p>
-            <li>Privacy</li>
-            <li>Terms</li>
-            <p>Follow us: </p>
-        </footer>
+    <div class="main-section testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quick and easy process!"</p>
+                <strong>– Marko Kaasalainen</strong>
+            </div>
+            <div class="testimonial">
+                <p>"Transparent terms and great customer support. Highly recommended."</p>
+                <strong>– Hayder Sabah</strong>
+            </div>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="main-section faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>How long does approval take?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Usually within minutes.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What is the interest rate?</h4>
+                <p>Our standard rate is 5% annually. Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="countdown-section" id="countdown">
+        <div class="container">
+            <h2 id="countdown-title">Countdown to Midsummer Eve</h2>
+            <div class="countdown-timer" id="countdown">
+                <div><span id="days">00</span><label>Days</label></div>
+                <div><span id="hours">00</span><label>Hours</label></div>
+                <div><span id="minutes">00</span><label>Minutes</label></div>
+                <div><span id="seconds">00</span><label>Seconds</label></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p>info@example.com</p>
+                <p>+358 40 00 000 00</p>
+                <p>Turku, Finlan</p>
+            </div>
+
+            <div class="footer-column footer-menu">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#applyNow">Apply</a></li>
+                    <li><a href="#countdown">Countdown</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column social-media">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Draivi. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
+
+<script src="script2.js"></script>
+
 </html>
