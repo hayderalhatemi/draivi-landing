@@ -1,6 +1,6 @@
 # Loan Landing Page
 
-A modern, responsive landing page for applying for a loan online. Includes an animated hero section, real-time loan calculator, dynamic countdown timer, responsive form with validation, and a mobile-friendly hamburger menu.
+A modern, responsive landing page for applying for a loan online. Includes an animated hero section, real-time loan calculator, dynamic countdown timer, responsive form with validation, and a mobile-friendly hamburger menu. Hosted with GitHub Pages.
 
 ###  Run Locally
 
@@ -14,7 +14,7 @@ From the bottom of the VS Code press go live
 
 ### Features
 
-- Responsive design (mobile/tablet/desktop) 
+- Responsive design (mobile/tablet/desktop)
 - Dynamic monthly loan calculator
 - Countdown timer (Midsummer or New Year’s Eve via URL) use ?counter=newyear to see countdown to New Year's Eve
 - Accessible, validated form
