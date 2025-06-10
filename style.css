@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* Root variables */
 :root {
   --primary-color: #4f46e5;
   --secondary-color: #0a0f9e;
@@ -32,6 +33,7 @@ body {
   z-index: 1100;
 }
 
+/* Styling for the hamburger icon lines */
 .hamburger-icon,
 .hamburger-icon::before,
 .hamburger-icon::after {
@@ -83,6 +85,7 @@ button {
   transition: background 0.2s ease-in-out;
 }
 
+/* Container to center content */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -183,7 +186,7 @@ button {
   transform: translateY(-2px);
 }
 
-
+/* Form container styling */
 .form-container {
   background: var(--);
   padding: 30px;
@@ -226,12 +229,14 @@ select {
   appearance: none;
 }
 
+/* Fix for autofill background color */
 input:-webkit-autofill {
   box-shadow: 0 0 0 1000px white inset !important;
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
   -webkit-text-fill-color: #000 !important;
 }
 
+/* Range input styling */
 input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
@@ -433,6 +438,7 @@ h2 {
   font-size: 14px;
 }
 
+/* Media queries for responsive design */
 @media (max-width: 1024px) {
   .hero h1 {
     font-size: 40px;
@@ -451,6 +457,7 @@ h2 {
   }
 }
 
+/* Navigation menu behavior on smaller screens */
 @media (max-width: 768px) {
   .nav {
     position: fixed;
