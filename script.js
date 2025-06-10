@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Form Script
+// Loan calculator elements
 const loanSelect = document.getElementById('loanAmount');
 const loanRange = document.getElementById('loanRange');
 const paymentDisplay = document.getElementById('monthlyPayment');
 
+// calculate monthly payment
 function updateMonthlyPayment(amount) {
   const rate = 0.05;
   const months = 12;
@@ -21,6 +22,7 @@ function updateMonthlyPayment(amount) {
   paymentDisplay.textContent = `Estimated monthly payment: ${monthlyPayment.toFixed(2)} €`;
 }
 
+// populate lona amount options
 for (let amount = 1000; amount <= 20000; amount += 1000) {
   const option = document.createElement('option');
   option.value = amount;
@@ -28,12 +30,14 @@ for (let amount = 1000; amount <= 20000; amount += 1000) {
   loanSelect.appendChild(option);
 }
 
+// sync select and range inputs
 function syncLoanAmount(value) {
   loanSelect.value = value;
   loanRange.value = value;
   updateMonthlyPayment(parseFloat(value));
 }
 
+// input event listeners
 loanSelect.addEventListener('change', () => {
   syncLoanAmount(loanSelect.value);
 });
@@ -42,16 +46,19 @@ loanRange.addEventListener('input', () => {
   syncLoanAmount(loanRange.value);
 });
 
+// show error message
 function showError(id, message) {
   document.getElementById(id).textContent = message;
 }
 
+// clear all errors
 function clearErrors() {
   ['loanAmountError', 'nameError', 'emailError', 'phoneError', 'consentError'].forEach(id => {
     document.getElementById(id).textContent = '';
   });
 }
 
+// validation function
 function validateForm() {
   clearErrors();
   const loanAmount = parseFloat(loanSelect.value);
@@ -71,6 +78,9 @@ function validateForm() {
     showError('nameError', 'Name is required.');
     valid = false;
   }
+  else if (name.length < 2) {
+    showError('nameError', 'Name must be longer.');
+  }
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
@@ -80,7 +90,7 @@ function validateForm() {
 
   const phonePattern = /^[0-9\-\+]{9,15}$/;
   if (!phonePattern.test(phone)) {
-    showError('phoneError', 'Enter a valid phone number (9-15 digits).');
+    showError('phoneError', 'Enter a valid phone number');
     valid = false;
   }
 
@@ -92,10 +102,10 @@ function validateForm() {
   return valid;
 }
 
+// form submission
 document.getElementById('loanForm').addEventListener('submit', function (e) {
   e.preventDefault();
   if (validateForm()) {
-    // Already updated by live update
     alert('Form is valid!');
   }
 });
@@ -126,6 +136,7 @@ document.getElementById('applyNow').addEventListener('click', function () {
   });
 });
 
+// countdown timer
 function getCountdownTarget() {
   const params = new URLSearchParams(window.location.search);
   const counter = params.get("counter");
@@ -167,4 +178,4 @@ function updateCountdown() {
 
 // Update every second
 setInterval(updateCountdown, 1000);
-updateCountdown(); // initial call
+updateCountdown();

@@ -48,13 +48,16 @@
     <div class="form-container" id="loanFormSection">
         <h2>Loan Application</h2>
         <form id="loanForm" novalidate>
-            <label>Requested loan amount (select):</label>
+            <label>Requested loan amount:</label>
             <select id="loanAmount">
                 <option value="">Select an amount</option>
             </select>
             <div class="error-message" id="loanAmountError"></div>
 
             <input type="range" id="loanRange" min="1000" max="20000" step="1000">
+
+            <p class="rate">Monthly payment (5% interest, 12 months)</p>
+
 
             <div id="monthlyPayment"></div>
 
@@ -81,7 +84,7 @@
                 Applying with a co-applicant
             </label>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Apply now</button>
         </form>
     </div>
 
